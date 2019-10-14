@@ -15,8 +15,8 @@ add_action('plugins_loaded', 'MM\Location\init');
 
 function init() {
     loadTextdomain();
-    include_once('includes/mm-location-posttype.php');
-    include_once('includes/mm-location-taxonomy.php');
+    include_once('includes/posttype/mm-location-posttype.php');
+    include_once('includes/posttype/mm-location-taxonomy.php');
     include_once('includes/metaboxes/mm-location-save-country.php');
     include_once('includes/metaboxes/mm-location-save-company.php');
     include_once('includes/metaboxes/mm-location-save-phone.php');
@@ -25,8 +25,8 @@ function init() {
     include_once('includes/metaboxes/mm-location-save-email.php');
     include_once('includes/metaboxes/mm-location-save-maps.php');
     include_once('includes/metaboxes/mm-location-metabox-add.php');
-    include_once('includes/mm-location-admin-view.php');
-    include_once('includes/mm-location-shortcode.php');
+    include_once('includes/admin/mm-location-admin-view.php');
+    include_once('includes/shortcode/mm-location-shortcode.php');
     add_action( 'admin_enqueue_scripts', 'MM\Location\register_plugin_styles' );
 }
 function loadTextdomain() {
