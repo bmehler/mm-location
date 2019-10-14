@@ -14,6 +14,7 @@ function location_columns( $columns ) {
             'email'             => __('E-Mail', 'mm-location'),
             'maps'              => __('Maps', 'mm-location'),
             'thumbnail'         => __('Thumbnail', 'mm-location'),
+            'genre'             => __('Genre', 'mm-location')
 	);
 
 	return $columns;
@@ -61,7 +62,7 @@ function show_location_columns($column_name) {
             echo $thumbnail;
             break;
          case 'genre':
-            $genre = get_the_term_list($post->ID, 'genre');
+            $genre = get_the_term_list($post->ID, 'genre', '', ', ');
             echo $genre;
             break;
     }

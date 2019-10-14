@@ -21,11 +21,11 @@ function location_taxonomies() {
 		'add_new_item'      			=> __('Add New Genre', 'mm-location'),
 		'new_item_name'     			=> __('New Genre Name', 'mm-location'),
 		'menu_name'         			=> __('Genre', 'mm-location'),
-		'separate_items_with_commas'  	=> __( 'Elemente mit Komma trennen', 'rrze-video' ),
-        'search_items'               	=> __( 'Genre suchen', 'rrze-video' ),
-        'add_or_remove_items'         	=> __( 'Genre hinzufügen oder entfernen', 'rrze-video' ),
-        'choose_from_most_used'       	=> __( 'Am häufigsten verwendet', 'rrze-video' ),
-		'not_found'                   	=> __( 'Nicht gefunden', 'rrze-video' ),
+		'separate_items_with_commas'  	=> __( 'Elemente mit Komma trennen', 'mm-location'),
+        'search_items'               	=> __( 'Genre suchen', 'mm-location'),
+        'add_or_remove_items'         	=> __( 'Genre hinzufügen oder entfernen','mm-location'),
+        'choose_from_most_used'       	=> __( 'Am häufigsten verwendet', 'mm-location'),
+		'not_found'                   	=> __( 'Nicht gefunden', 'mm-location'),
 	);
 
 	$args = array(
@@ -36,6 +36,7 @@ function location_taxonomies() {
         'show_in_nav_menus' => true,
 		'query_var'         => true,
 		'public'            => true,
+		'update_count_callback' => '_update_post_term_count'
 	);
 
     register_taxonomy('genre', array('location'), $args);
