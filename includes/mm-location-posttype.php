@@ -37,13 +37,13 @@ function location_posttype() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array('slug' => 'location'),
-		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'supports'           => array('title', 'thumbnail'),
         'taxonomies'         => array(''),
+        'has_archive'        => true,		
+        'exclude_from_search'=> false
     );
 
 	register_post_type('location', $args);

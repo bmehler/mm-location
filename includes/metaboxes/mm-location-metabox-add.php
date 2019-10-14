@@ -7,12 +7,12 @@ namespace MM\Location;
  */
 
 add_action('add_meta_boxes', 'MM\Location\country_meta_box');
-add_action('add_meta_boxes', 'MM\Location\company_meta_box');
+/*add_action('add_meta_boxes', 'MM\Location\company_meta_box');
 add_action('add_meta_boxes', 'MM\Location\phone_meta_box');
 add_action('add_meta_boxes', 'MM\Location\street_meta_box');
 add_action('add_meta_boxes', 'MM\Location\city_meta_box');
 add_action('add_meta_boxes', 'MM\Location\email_meta_box');
-add_action('add_meta_boxes', 'MM\Location\maps_meta_box');
+add_action('add_meta_boxes', 'MM\Location\maps_meta_box');*/
 
 function country_meta_box() {
     add_meta_box(

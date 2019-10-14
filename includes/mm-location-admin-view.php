@@ -5,6 +5,7 @@ namespace MM\Location;
 function location_columns( $columns ) {
 
 	$columns = array(
+            'title'             => __( 'Title', 'mm-location' ),
             'country'           => __('Country', 'mm-location'),
             'company'           => __('Company', 'mm-location'),
             'phone'             => __('Phone', 'mm-location'),
@@ -23,11 +24,15 @@ add_filter( 'manage_edit-location_columns', 'MM\Location\location_columns') ;
 function show_location_columns($column_name) {
     global $post;
     switch ($column_name) {
+        case 'title':
+            $title = get_post_meta($post->ID, 'title', true);
+            echo $title;
+        break;
         case 'country':
             $country = get_post_meta($post->ID, 'country', true);
             echo $country;
             break;
-        case 'comany':
+        case 'company':
             $company = get_post_meta($post->ID, 'company', true);
             echo $company;
             break;
@@ -62,7 +67,7 @@ function show_location_columns($column_name) {
     }
 }
 
-add_action('manage_posts_custom_column',  'MM\Locations\show_location_columns');
+add_action('manage_posts_custom_column',  'MM\Location\show_location_columns');
 
 function location_sortable_columns() {
   return array(

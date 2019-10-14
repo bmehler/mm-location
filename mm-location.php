@@ -17,8 +17,8 @@ function init() {
     loadTextdomain();
     include_once('includes/mm-location-posttype.php');
     include_once('includes/mm-location-taxonomy.php');
-    include_once('includes/metaboxes/mm-location-metabox-add.php');
     include_once('includes/metaboxes/mm-location-save-country.php');
+    include_once('includes/metaboxes/mm-location-metabox-add.php');
     include_once('includes/mm-location-admin-view.php');
     include_once('includes/mm-location-shortcode.php');
     add_action( 'admin_enqueue_scripts', 'MM\Location\register_plugin_styles' );
