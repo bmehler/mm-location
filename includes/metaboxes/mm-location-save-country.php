@@ -8,39 +8,38 @@ namespace MM\Location;
 
 function country_callback( $post) {
 
-    wp_nonce_field( '_url_nonce', 'url_nonce' );
+    wp_nonce_field( '_country_nonce', 'country_nonce' );
 
-    $value = get_post_meta( $post->ID, 'url', true );
+    $value = get_post_meta( $post->ID, 'country', true );
     echo '
         <table class="form-table">
             <tr>
                 <th scope="row">
-                    <label for="url">' . __('URL zum Video') . '</label>
+                    <label for="country">' . __('Subsidiary Country') . '</label>
                 </th>
                 <td>
-                    <input type="text" class="regular-text code" name="url" id="url" value="'.  esc_attr( $value ) . '"/><br>' . PHP_EOL . '
-                    <em>' . __('z.B. http://www.video.uni-erlangen.de/webplayer/id/13953') . '</em>
+                    <input type="text" class="regular-text code" name="country" id="country" value="'.  esc_attr( $value ) . '"/><br>' . PHP_EOL . '
                 </td>
             </tr>
         </table>' . PHP_EOL;
 
 }
 
-function url_meta_box_save( $post_id, $post, $update ) {
+function country_meta_box_save( $post_id, $post, $update ) {
 
     $post_type = get_post_type($post_id);
 
     if ( "location" != $post_type ) return;
 
-    if ( isset( $_POST['url'] )  ) {
-        $url = sanitize_text_field( $_POST['url'] );
-        update_post_meta( $post_id, 'url', $url );
+    if ( isset( $_POST['country'] )  ) {
+        $country = sanitize_text_field( $_POST['country'] );
+        update_post_meta( $post_id, 'country', $country );
     } else {
-        update_post_meta( $post_id, 'url', FALSE );
+        update_post_meta( $post_id, 'country', FALSE );
     }
 }
 
-add_action( 'save_post', 'MM\Location\url_meta_box_save', 10, 3 );
+add_action( 'save_post', 'MM\Location\country_meta_box_save', 10, 3 );
 
 
 
