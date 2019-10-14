@@ -18,6 +18,12 @@ function init() {
     include_once('includes/mm-location-posttype.php');
     include_once('includes/mm-location-taxonomy.php');
     include_once('includes/metaboxes/mm-location-save-country.php');
+    include_once('includes/metaboxes/mm-location-save-company.php');
+    include_once('includes/metaboxes/mm-location-save-phone.php');
+    include_once('includes/metaboxes/mm-location-save-street.php');
+    include_once('includes/metaboxes/mm-location-save-city.php');
+    include_once('includes/metaboxes/mm-location-save-email.php');
+    include_once('includes/metaboxes/mm-location-save-maps.php');
     include_once('includes/metaboxes/mm-location-metabox-add.php');
     include_once('includes/mm-location-admin-view.php');
     include_once('includes/mm-location-shortcode.php');

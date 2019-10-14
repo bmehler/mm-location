@@ -49,7 +49,7 @@ function show_location_columns($column_name) {
             echo $city;
             break;
         case 'email':
-            $description = get_post_meta($post->ID, 'email', true);
+            $email = get_post_meta($post->ID, 'email', true);
             echo $email;
             break;
         case 'maps':
