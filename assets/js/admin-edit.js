@@ -24,16 +24,28 @@
 			var $edit_row = $( '#edit-' + $post_id );
 			var $post_row = $( '#post-' + $post_id );
 
-			console.log('editrow', $edit_row);
-			console.log('editpost', $post_row);
+			//console.log('editrow', $edit_row);
+			//console.log('editpost', $post_row);
 
 			// get the data
-			var $country = $( '.country', $post_row ).text();
+			var $country	= 	$('.country', $post_row).text();
+			var $company 	= 	$('.company', $post_row).text();
+			var $phone 		= 	$('.phone', $post_row).text();
+			var $street		= 	$('.street', $post_row).text();
+			var $city 		= 	$('.city', $post_row).text();
+			var $email 		= 	$('.email', $post_row).text();
+			var $maps 		= 	$('.maps', $post_row).text();
 
 			// populate the data
-			$( ':input[name="mm-quick-edit-country"]', $edit_row ).val( $country );
+			$(':input[name="mm-quick-edit-country"]', $edit_row).val($country);
+			$(':input[name="mm-quick-edit-company"]', $edit_row).val($company);
+			$(':input[name="mm-quick-edit-phone"]', $edit_row).val($phone);
+			$(':input[name="mm-quick-edit-street"]', $edit_row).val($street);
+			$(':input[name="mm-quick-edit-city"]', $edit_row).val($city);
+			$(':input[name="mm-quick-edit-email"]', $edit_row).val($email);
+			$(':input[name="mm-quick-edit-maps"]', $edit_row).val($maps);
 
-			console.log('.country', $country);
+			//console.log('.country', $country);
 		}
 	};
 
