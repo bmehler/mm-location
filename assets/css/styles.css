@@ -1,8 +1,27 @@
-#lottery-number, #lottery-zusatz {
-    font-size: 25px;
-    color: #000;
+span.mm-quick-edit-country {
+    margin-right: 20px;
 }
 
-#neu {
-    margin-top: 20px;
+span.mm-quick-edit-company {
+    margin-right: 11px;
+}
+
+span.mm-quick-edit-phone {
+    margin-right: 28px;
+}
+
+span.mm-quick-edit-street {
+    margin-right: 28px;
+}
+
+span.mm-quick-edit-city {
+    margin-right: 40px;
+}
+
+span.mm-quick-edit-email {
+    margin-right: 27px;
+}
+
+span.mm-quick-edit-maps {
+    margin-right: 32px;
 }

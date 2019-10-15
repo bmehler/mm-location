@@ -27,6 +27,7 @@ function init() {
     include_once('includes/metaboxes/mm-location-metabox-add.php');
     include_once('includes/admin/mm-location-admin-view.php');
     include_once('includes/admin/mm-location-admin-help-tab.php');
+    include_once('includes/admin/mm-location-quick-edit.php');
     include_once('includes/shortcode/mm-location-shortcode.php');
     add_action( 'admin_enqueue_scripts', 'MM\Location\register_plugin_styles' );
 }
