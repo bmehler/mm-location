@@ -24,16 +24,16 @@
 			var $edit_row = $( '#edit-' + $post_id );
 			var $post_row = $( '#post-' + $post_id );
 
-			console.log($edit_row);
-			console.log($post_row);
+			console.log('editrow', $edit_row);
+			console.log('editpost', $post_row);
 
 			// get the data
-			var $country = $( '.mm-quick-edit-country', $post_row ).text();
+			var $country = $( '.country', $post_row ).text();
 
 			// populate the data
 			$( ':input[name="mm-quick-edit-country"]', $edit_row ).val( $country );
 
-			console.log($country);
+			console.log('.country', $country);
 		}
 	};
 
