@@ -5,6 +5,7 @@ namespace MM\Location;
 function location_columns( $columns ) {
 
 	$columns = array(
+            'cb'                => '<input type="checkbox" />',
             'title'             => __( 'Title', 'mm-location' ),
             'country'           => __('Country', 'mm-location'),
             'company'           => __('Company', 'mm-location'),
