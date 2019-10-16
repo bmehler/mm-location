@@ -45,6 +45,8 @@
 			$(':input[name="mm-quick-edit-email"]', $edit_row).val($email);
 			$(':input[name="mm-quick-edit-maps"]', $edit_row).val($maps);
 
+			$(':input[name="mm-quick-edit-country"]', $edit_row).attr('value', $country);
+
 			//console.log('.country', $country);
 		}
 	};
