@@ -38,14 +38,20 @@
 
 			// populate the data
 			$(':input[name="country"]', $edit_row).val($country);
-			$(':input[name="mm-quick-edit-company"]', $edit_row).val($company);
-			$(':input[name="mm-quick-edit-phone"]', $edit_row).val($phone);
-			$(':input[name="mm-quick-edit-street"]', $edit_row).val($street);
-			$(':input[name="mm-quick-edit-city"]', $edit_row).val($city);
-			$(':input[name="mm-quick-edit-email"]', $edit_row).val($email);
-			$(':input[name="mm-quick-edit-maps"]', $edit_row).val($maps);
+			$(':input[name="company"]', $edit_row).val($company);
+			$(':input[name="phone"]', $edit_row).val($phone);
+			$(':input[name="street"]', $edit_row).val($street);
+			$(':input[name="city"]', $edit_row).val($city);
+			$(':input[name="email"]', $edit_row).val($email);
+			$(':input[name="maps"]', $edit_row).val($maps);
 
 			$(':input[name="country"]', $edit_row).attr('value', $country);
+			$(':input[name="company"]', $edit_row).attr('value', $company);
+			$(':input[name="phone"]', $edit_row).attr('value', $phone);
+			$(':input[name="street"]', $edit_row).attr('value', $street);
+			$(':input[name="city"]', $edit_row).attr('value', $city);
+			$(':input[name="email"]', $edit_row).attr('value', $email);
+			$(':input[name="maps"]', $edit_row).attr('value', $maps);
 
 			//console.log('.country', $country);
 		}

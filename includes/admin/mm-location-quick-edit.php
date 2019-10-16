@@ -21,22 +21,22 @@ function display_custom_quickedit_book( $column_name, $post_type ) {
                     ?><span class="mm-quick-edit-country">Country</span><input name="country" /><?php
                     break;
                 case 'company':
-                    ?><span class="mm-quick-edit-company">Company</span><input name="mm-quick-edit-company" /><?php
+                    ?><span class="mm-quick-edit-company">Company</span><input name="company" /><?php
                     break;
                 case 'phone':
-                    ?><span class="mm-quick-edit-phone">Phone</span><input name="mm-quick-edit-phone" /><?php
+                    ?><span class="mm-quick-edit-phone">Phone</span><input name="phone" /><?php
                 break;
                 case 'street':
-                    ?><span class="mm-quick-edit-street">Street</span><input name="mm-quick-edit-street" /><?php
+                    ?><span class="mm-quick-edit-street">Street</span><input name="street" /><?php
                 break;
                 case 'city':
-                    ?><span class="mm-quick-edit-city">City</span><input name="mm-quick-edit-city" /><?php
+                    ?><span class="mm-quick-edit-city">City</span><input name="city" /><?php
                 break;
                 case 'email':
-                    ?><span class="mm-quick-edit-email">E-Mail</span><input name="mm-quick-edit-email" /><?php
+                    ?><span class="mm-quick-edit-email">E-Mail</span><input name="email" /><?php
                 break;
                 case 'maps':
-                    ?><span class="mm-quick-edit-maps">Maps</span><input name="mm-quick-edit-maps" /><?php
+                    ?><span class="mm-quick-edit-maps">Maps</span><input name="maps" /><?php
                 break;
                 }
             ?>
