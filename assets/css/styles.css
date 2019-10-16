@@ -27,12 +27,12 @@ span.mm-quick-edit-maps {
     margin-right: 32px;
 }
 
-input[name="mm-quick-edit-country"],
-input[name="mm-quick-edit-company"], 
-input[name="mm-quick-edit-phone"], 
-input[name="mm-quick-edit-street"], 
-input[name="mm-quick-edit-city"], 
-input[name="mm-quick-edit-email"], 
-input[name="mm-quick-edit-maps"] {
+input[name="country"],
+input[name="company"], 
+input[name="phone"], 
+input[name="street"], 
+input[name="city"], 
+input[name="email"], 
+input[name="maps"] {
     width: 250px;
 }
