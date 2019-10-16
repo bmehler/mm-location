@@ -18,7 +18,7 @@ function display_custom_quickedit_book( $column_name, $post_type ) {
             <?php 
                 switch ( $column_name ) {
                 case 'country':
-                    ?><span class="mm-quick-edit-country">Country</span><input name="mm-quick-edit-country" /><?php
+                    ?><span class="mm-quick-edit-country">Country</span><input name="country" /><?php
                     break;
                 case 'company':
                     ?><span class="mm-quick-edit-company">Company</span><input name="mm-quick-edit-company" /><?php

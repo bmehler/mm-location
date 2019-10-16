@@ -37,7 +37,7 @@
 			var $maps 		= 	$('.maps', $post_row).text();
 
 			// populate the data
-			$(':input[name="mm-quick-edit-country"]', $edit_row).val($country);
+			$(':input[name="country"]', $edit_row).val($country);
 			$(':input[name="mm-quick-edit-company"]', $edit_row).val($company);
 			$(':input[name="mm-quick-edit-phone"]', $edit_row).val($phone);
 			$(':input[name="mm-quick-edit-street"]', $edit_row).val($street);
@@ -45,7 +45,7 @@
 			$(':input[name="mm-quick-edit-email"]', $edit_row).val($email);
 			$(':input[name="mm-quick-edit-maps"]', $edit_row).val($maps);
 
-			$(':input[name="mm-quick-edit-country"]', $edit_row).attr('value', $country);
+			$(':input[name="country"]', $edit_row).attr('value', $country);
 
 			//console.log('.country', $country);
 		}
