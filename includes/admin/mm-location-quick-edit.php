@@ -17,6 +17,9 @@ function display_custom_quickedit_book( $column_name, $post_type ) {
             <label class="inline-edit-group">
             <?php 
                 switch ( $column_name ) {
+                case 'headquarter':
+                    ?><span class="mm-quick-edit-headquarter">Headquarter</span><input id="headquarter" type="checkbox" name="headquarter" value="1" /><?php
+                break;
                 case 'country':
                     ?><span class="mm-quick-edit-country">Country</span><input name="country" /><?php
                     break;

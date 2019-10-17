@@ -6,7 +6,8 @@ function location_columns( $columns ) {
 
 	$columns = array(
             'cb'                => '<input type="checkbox" />',
-            'title'             => __( 'Title', 'mm-location' ),
+            'title'             => __('Title', 'mm-location' ),
+            'headquarter'       => __('Headquarter', 'mm-location' ),
             'country'           => __('Country', 'mm-location'),
             'company'           => __('Company', 'mm-location'),
             'phone'             => __('Phone', 'mm-location'),
@@ -29,6 +30,10 @@ function show_location_columns($column_name) {
         case 'title':
             $title = get_post_meta($post->ID, 'title', true);
             echo $title;
+        break;
+        case 'headquarter':
+            $headquarter = get_post_meta($post->ID, 'headquarter', true);
+            echo $headquarter;
         break;
         case 'country':
             $country = get_post_meta($post->ID, 'country', true);

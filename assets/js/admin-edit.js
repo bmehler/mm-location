@@ -28,13 +28,17 @@
 			//console.log('editpost', $post_row);
 
 			// get the data
-			var $country	= 	$('.country', $post_row).text();
-			var $company 	= 	$('.company', $post_row).text();
-			var $phone 		= 	$('.phone', $post_row).text();
-			var $street		= 	$('.street', $post_row).text();
-			var $city 		= 	$('.city', $post_row).text();
-			var $email 		= 	$('.email', $post_row).text();
-			var $maps 		= 	$('.maps', $post_row).text();
+			var $country		= 	$('.country', $post_row).text();
+			var $company 		= 	$('.company', $post_row).text();
+			var $phone 			= 	$('.phone', $post_row).text();
+			var $street			= 	$('.street', $post_row).text();
+			var $city 			= 	$('.city', $post_row).text();
+			var $email 			= 	$('.email', $post_row).text();
+			var $maps 			= 	$('.maps', $post_row).text();
+			var $headquarter 	=  $('.headquarter', $post_row).text();
+
+			//console.log($headquarter);
+			
 
 			// populate the data
 			$(':input[name="country"]', $edit_row).val($country);
@@ -52,6 +56,12 @@
 			$(':input[name="city"]', $edit_row).attr('value', $city);
 			$(':input[name="email"]', $edit_row).attr('value', $email);
 			$(':input[name="maps"]', $edit_row).attr('value', $maps);
+
+			if($headquarter == 'no') {
+				$(':input[name="headquarter"]', $edit_row).prop('checked', false);
+			} else {
+				$(':input[name="headquarter"]', $edit_row).prop('checked', true);
+			}
 
 			//console.log('.country', $country);
 		}
