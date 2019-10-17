@@ -2,8 +2,20 @@
 
 namespace MM\Location;
 
-function HelloWorldShortcode() {
-	return '<p>Hello World!</p>';
+function locationShortcode() {
+
+// WP_Query arguments
+$args = array (
+	'post_type'              => array( 'location' ),
+	'post_status'            => array( 'publish' ),
+	'order'                  => 'ASC'
+);
+
+// The Query
+$services = new \WP_Query( $args );
+
+return 'Hello World!';
+
 }
 
-add_shortcode('helloworld', 'MM\Location\HelloWorldShortcode');
+add_shortcode('location', 'MM\Location\locationShortcode');
