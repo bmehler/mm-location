@@ -40,7 +40,8 @@ function location_posttype() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array('title', 'thumbnail'),
+        'supports'           => array('title', 'thumbnail'),
+        'rewrite'            => array('slug' => 'location'),
         'taxonomies'         => array(''),
         'has_archive'        => true,		
         'exclude_from_search'=> false
