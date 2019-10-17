@@ -6,6 +6,7 @@ namespace MM\Location;
  * Add metaboxes to location posttype.
  */
 
+add_action('add_meta_boxes', 'MM\Location\headquarter_meta_box');
 add_action('add_meta_boxes', 'MM\Location\country_meta_box');
 add_action('add_meta_boxes', 'MM\Location\company_meta_box');
 add_action('add_meta_boxes', 'MM\Location\phone_meta_box');
@@ -13,6 +14,17 @@ add_action('add_meta_boxes', 'MM\Location\street_meta_box');
 add_action('add_meta_boxes', 'MM\Location\city_meta_box');
 add_action('add_meta_boxes', 'MM\Location\email_meta_box');
 add_action('add_meta_boxes', 'MM\Location\maps_meta_box');
+
+function headquarter_meta_box() {
+    add_meta_box(
+        'headquarter',
+        __( 'Headquarter', 'mm-location' ),
+        'MM\Location\headquarter_callback',
+        'location',
+        'normal',
+        'high'
+    );
+}
 
 function country_meta_box() {
     add_meta_box(

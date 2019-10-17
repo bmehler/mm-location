@@ -17,6 +17,7 @@ function init() {
     loadTextdomain();
     include_once('includes/posttype/mm-location-posttype.php');
     include_once('includes/posttype/mm-location-taxonomy.php');
+    include_once('includes/metaboxes/mm-location-save-headquarter.php');
     include_once('includes/metaboxes/mm-location-save-country.php');
     include_once('includes/metaboxes/mm-location-save-company.php');
     include_once('includes/metaboxes/mm-location-save-phone.php');
