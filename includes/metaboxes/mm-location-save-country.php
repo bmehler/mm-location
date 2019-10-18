@@ -27,6 +27,11 @@ function country_callback( $post) {
 
 function country_meta_box_save( $post_id, $post, $update ) {
 
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) ) {
+        return $post_id;
+    }
+
     $post_type = get_post_type($post_id);
 
     if ( "location" != $post_type ) return;
