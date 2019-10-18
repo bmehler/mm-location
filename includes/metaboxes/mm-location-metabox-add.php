@@ -14,6 +14,7 @@ add_action('add_meta_boxes', 'MM\Location\street_meta_box');
 add_action('add_meta_boxes', 'MM\Location\city_meta_box');
 add_action('add_meta_boxes', 'MM\Location\email_meta_box');
 add_action('add_meta_boxes', 'MM\Location\maps_meta_box');
+add_action('add_meta_boxes', 'MM\Location\info_meta_box');
 
 function headquarter_meta_box() {
     add_meta_box(
@@ -97,6 +98,17 @@ function maps_meta_box() {
         'maps',
         __('Maps', 'mm-location' ),
         'MM\Location\maps_callback',
+        'location',
+        'normal',
+        'high'
+    );
+}
+
+function info_meta_box() {
+    add_meta_box(
+        'info',
+        __('Info', 'mm-location' ),
+        'MM\Location\info_callback',
         'location',
         'normal',
         'high'

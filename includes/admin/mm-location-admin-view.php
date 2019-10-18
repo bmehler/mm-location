@@ -15,6 +15,7 @@ function location_columns( $columns ) {
             'city'              => __('City', 'mm-location'),
             'email'             => __('E-Mail', 'mm-location'),
             'maps'              => __('Maps', 'mm-location'),
+            'info'              => __('Info', 'mm-location'),
             'thumbnail'         => __('Thumbnail', 'mm-location'),
             'genre'             => __('Genre', 'mm-location')
 	);
@@ -61,6 +62,10 @@ function show_location_columns($column_name) {
             break;
         case 'maps':
             $maps = get_post_meta($post->ID, 'maps', true);
+            echo $maps;
+            break;
+        case 'info':
+            $maps = get_post_meta($post->ID, 'info', true);
             echo $maps;
             break;
         case 'thumbnail':

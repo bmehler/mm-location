@@ -35,9 +35,10 @@
 			var $city 			= 	$('.city', $post_row).text();
 			var $email 			= 	$('.email', $post_row).text();
 			var $maps 			= 	$('.maps', $post_row).text();
-			var $headquarter 	=  $('.headquarter', $post_row).text();
+			var $headquarter 	=  	$('.headquarter', $post_row).text();
+			var $info		 	=  	$('.info', $post_row).text();
 
-			//console.log($headquarter);
+			//console.log($info);
 			
 
 			// populate the data
@@ -62,6 +63,8 @@
 			} else {
 				$(':input[name="headquarter"]', $edit_row).prop('checked', true);
 			}
+
+			$('[name="info"]', $edit_row).val($info);
 
 			//console.log('.country', $country);
 		}

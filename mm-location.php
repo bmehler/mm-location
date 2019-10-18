@@ -25,6 +25,7 @@ function init() {
     include_once('includes/metaboxes/mm-location-save-city.php');
     include_once('includes/metaboxes/mm-location-save-email.php');
     include_once('includes/metaboxes/mm-location-save-maps.php');
+    include_once('includes/metaboxes/mm-location-save-info.php');
     include_once('includes/metaboxes/mm-location-metabox-add.php');
     include_once('includes/admin/mm-location-admin-view.php');
     include_once('includes/admin/mm-location-admin-help-tab.php');

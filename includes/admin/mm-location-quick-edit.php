@@ -41,6 +41,9 @@ function display_custom_quickedit_book( $column_name, $post_type ) {
                 case 'maps':
                     ?><span class="mm-quick-edit-maps">Maps</span><input name="maps" /><?php
                 break;
+                case 'info':
+                    ?><span class="mm-quick-edit-info">Info</span><textarea name="info" cols="35" rows="4"></textarea><?php
+                break;
                 }
             ?>
         </label>
