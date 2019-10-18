@@ -26,8 +26,10 @@ function locationShortcode() {
 				$country 	= get_post_meta( $post->ID, 'country', true );
 				$email 		= get_post_meta( $post->ID, 'email', true );
 				$maps 		= get_post_meta( $post->ID, 'maps', true );
+				$info 		= get_post_meta( $post->ID, 'info', true );
 				?>
 				<div>Country: <?php echo esc_attr($country) ?></div>
+				<div>Info: <?php echo esc_attr($info) ?></div>
 				<div>Company: <?php echo esc_attr($company) ?></div>
 				<div>Phone: <?php echo esc_attr($phone) ?></div>
 				<div>Street: <?php echo esc_attr($street) ?></div>
