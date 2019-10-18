@@ -14,8 +14,8 @@ class Foo_Widget extends \WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'foo_widget', // Base ID
-			esc_html__( 'Widget Title', 'text_domain' ), // Name
-			array( 'description' => esc_html__( 'A Foo Widget', 'text_domain' ), ) // Args
+			esc_html__('Location Widget', 'mm-location'), // Name
+			array( 'description' => esc_html__('Creates Company Locations', 'mm-location'),) // Args
 		);
 	}
 
