@@ -8,7 +8,7 @@ function display_custom_quickedit_book( $column_name, $post_type ) {
     static $printNonce = TRUE;
     if ( $printNonce ) {
         $printNonce = FALSE;
-        wp_nonce_field( plugin_basename( __FILE__ ), 'location_edit_nonce' );
+        wp_nonce_field( plugin_basename( __FILE__ ), 'inlineeditnonce' );
     }
 
     ?>

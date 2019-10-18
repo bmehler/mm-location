@@ -8,7 +8,7 @@ namespace MM\Location;
 
 function country_callback( $post) {
 
-    wp_nonce_field( '_country_nonce', 'country_nonce' );
+    wp_nonce_field( basename( __FILE__ ), 'location_nonce' );
 
     $value = get_post_meta( $post->ID, 'country', true );
     echo '
@@ -27,6 +27,14 @@ function country_callback( $post) {
 
 function country_meta_box_save( $post_id, $post, $update ) {
 
+    /*if( isset($_POST['_inline_edit']) && !wp_verfiy_nonce($_POST['_inline_edit'], 'inlineeditnonce')) {
+        return $post_id;
+    }
+
+    if (!isset($_POST['location_nonce']) || !wp_verify_nonce($_POST['location_nonce'], basename(__FILE__))) {
+        return $post_id;
+    }*/
+
     // Check permissions
     if ( !current_user_can( 'edit_post', $post_id ) ) {
         return $post_id;
@@ -36,7 +44,7 @@ function country_meta_box_save( $post_id, $post, $update ) {
 
     if ( "location" != $post_type ) return;
 
-    if ( isset( $_POST['country'] )  ) {
+    if (isset($_POST['country']))  {
         $country = sanitize_text_field( $_POST['country'] );
         update_post_meta( $post_id, 'country', $country );
     } else {
