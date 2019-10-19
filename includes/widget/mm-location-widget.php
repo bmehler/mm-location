@@ -32,7 +32,7 @@ class Foo_Widget extends \WP_Widget {
 
 		echo $args['before_widget'];
 		if (!empty( $instance['p'])) {
-			echo $args['before_title'];
+			//echo $args['before_title'];
 			
 			$args = array (
 				'post_type'		=> 	array( 'location'),
@@ -58,7 +58,7 @@ class Foo_Widget extends \WP_Widget {
 			
 			include(plugin_dir_path( __DIR__ ) . 'widget/templates/mm-location-widget-template.php');
 			
-			echo $args['after_title'];
+			//echo $args['after_title'];
 		}
 		//echo esc_html__( 'Hello, World!', 'mm-location' );
 		echo $args['after_widget'];
