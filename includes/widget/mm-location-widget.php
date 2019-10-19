@@ -27,10 +27,38 @@ class Foo_Widget extends \WP_Widget {
 	 * @param array $args     Widget arguments.
 	 * @param array $instance Saved values from database.
 	 */
-	public function widget( $args, $instance ) {
+	public function widget($args, $instance) {
+		global $post;
+
 		echo $args['before_widget'];
-		if ( ! empty( $instance['p'] ) ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['p'] ) . $args['after_title'];
+		if (!empty( $instance['p'])) {
+			echo $args['before_title'];
+			
+			$args = array (
+				'post_type'		=> 	array( 'location'),
+				'post_status'	=> 	array( 'publish'),
+				'p'            	=>	$instance['p'],
+			);
+
+			$query = new \WP_Query($args);
+
+			if($query->have_posts() ) :
+				while ($query->have_posts()) : $query->the_post(); 
+					$country 	= get_post_meta( $post->ID, 'country', true );
+					$company 	= get_post_meta( $post->ID, 'company', true );
+					$phone 		= get_post_meta( $post->ID, 'phone', true );
+					$street		= get_post_meta( $post->ID, 'street', true );
+					$city 		= get_post_meta( $post->ID, 'city', true );
+					$country 	= get_post_meta( $post->ID, 'country', true );
+					$email 		= get_post_meta( $post->ID, 'email', true );
+					$maps 		= get_post_meta( $post->ID, 'maps', true );
+					$info 		= get_post_meta( $post->ID, 'info', true );
+				endwhile;
+			endif;
+			
+			include(plugin_dir_path( __DIR__ ) . 'widget/templates/mm-location-widget-template.php');
+			
+			echo $args['after_title'];
 		}
 		//echo esc_html__( 'Hello, World!', 'mm-location' );
 		echo $args['after_widget'];
@@ -44,11 +72,11 @@ class Foo_Widget extends \WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$p = ! empty( $instance['p'] ) ? $instance['p'] : esc_html__( 'Post-ID', 'mm-location' );
+		$p = !empty($instance['p']) ? $instance['p'] : esc_html__('Post-ID', 'mm-location');
 		?>
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'p' ) ); ?>"><?php esc_attr_e( 'Location Post ID', 'mm-location' ); ?></label> 
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'p' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'p' ) ); ?>" type="text" value="<?php echo esc_attr( $p ); ?>">
+		<label for="<?php echo esc_attr($this->get_field_id('p')); ?>"><?php esc_attr_e('Location Post ID', 'mm-location'); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('p')); ?>" name="<?php echo esc_attr($this->get_field_name('p')); ?>" type="text" value="<?php echo esc_attr($p); ?>">
 		</p>
 		<?php 
 	}
@@ -65,7 +93,7 @@ class Foo_Widget extends \WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
-		$instance['p'] = ( ! empty( $new_instance['p'] ) ) ? sanitize_text_field( $new_instance['p'] ) : '';
+		$instance['p'] = (!empty( $new_instance['p'])) ? sanitize_text_field($new_instance['p']) : '';
 
 		return $instance;
 	}

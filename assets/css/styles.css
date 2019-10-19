@@ -48,3 +48,7 @@ input[name="maps"] {
 textarea[name="info"] {
     width: 250px !important
 }
+
+.widget-title-location {
+    font-size: 10px !important;
+}
