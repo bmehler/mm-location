@@ -33,6 +33,7 @@ function init() {
     include_once('includes/admin/mm-location-quick-edit-update-save.php');
     include_once('includes/shortcode/mm-location-shortcode.php');
     include_once('includes/widget/mm-location-widget.php');
+    include_once('includes/options/mm-location-options.php');
     add_action( 'admin_enqueue_scripts', 'MM\Location\register_plugin_styles' );
 }
 function loadTextdomain() {
