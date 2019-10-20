@@ -10,3 +10,4 @@
 <div>Checkbox Field: <?php echo get_option('location_checkbox_field'); ?></div>
 <div>Select Option Field: <?php echo get_option('location_select_option_field'); ?></div>
 <div>Radio Option Field: <?php echo get_option('location_radio_option_field'); ?></div>
+<div>Colorpicker: <?php echo get_option('location_color_option_field') ?></div>

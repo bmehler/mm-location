@@ -3,7 +3,13 @@
 namespace MM\Location;
 if (is_admin()){
     add_action('admin_menu', 'MM\Location\register_mm_location_submenu_page');
-    add_action('admin_init', 'MM\Location\register_mm_location_settings' );
+    add_action('admin_init', 'MM\Location\register_mm_location_settings');
+    add_action('admin_enqueue_scripts', 'MM\Location\enqueue_admin_js');
+}
+
+function enqueue_admin_js() {
+    wp_enqueue_style('wp-color-picker');
+    wp_enqueue_script('cpa_custom_js', plugins_url('mm-location/assets/js/jquery.custom.js'), array('jquery', 'wp-color-picker'), '', true);
 }
  
 function register_mm_location_submenu_page() {
@@ -21,6 +27,7 @@ function register_mm_location_settings() {
     register_setting('mm-location-option-group', 'location_checkbox_field');
     register_setting('mm-location-option-group', 'location_select_option_field');
     register_setting('mm-location-option-group', 'location_radio_option_field');
+    register_setting('mm-location-option-group', 'location_color_option_field');
 }
  
 function mm_location_submenu_page_callback() {
@@ -70,6 +77,15 @@ function mm_location_submenu_page_callback() {
                     <input type="radio" name="location_radio_option_field" value="male" <?php checked(get_option('location_radio_option_field'), "male"); ?>> Male<br>
                     <input type="radio" name="location_radio_option_field" value="female" <?php checked(get_option('location_radio_option_field'), "female"); ?>> Female<br>
                     <input type="radio" name="location_radio_option_field" value="other" <?php checked(get_option('location_radio_option_field'), "other"); ?>> Other<br> 
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Colorpicker</th>
+                <td>
+                    <?php
+                        $val = get_option('location_color_option_field');
+                        echo '<input type="text" name="location_color_option_field" class="cpa-color-picker" value="' . $val . '">';
+                    ?>
                 </td>
             </tr>
         </table>
