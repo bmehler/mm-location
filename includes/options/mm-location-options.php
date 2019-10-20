@@ -31,6 +31,11 @@ function mm_location_submenu_page_callback() {
         <form method="post" action="options.php">
         <?php settings_fields('mm-location-option-group'); ?>
         <?php do_settings_sections('mm-location-option-group'); ?>
+        <?php if(isset($_GET['settings-updated'])) { ?>
+            <div id="message" class="updated">
+            <p><strong><?php _e('Options updated and saved.') ?></strong></p>
+            </div>
+        <?php } ?>
         <table class="form-table">
             <tr valign="top">
                 <th scope="row">Test Input Box</th>
