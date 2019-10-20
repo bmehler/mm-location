@@ -2,9 +2,9 @@
 
 namespace MM\Location;
 
-add_action('admin_menu', 'MM\Location\wpdocs_register_my_custom_submenu_page');
+add_action('admin_menu', 'MM\Location\wpdocs_register_mm_location_submenu_page');
  
-function wpdocs_register_my_custom_submenu_page() {
+function wpdocs_register_mm_location_submenu_page() {
     add_submenu_page(
         'edit.php?post_type=location',
         'Options',
